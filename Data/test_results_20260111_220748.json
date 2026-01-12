@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-01-11T22:07:48.589272",
+  "total_tests": 3,
+  "correct": 2,
+  "accuracy": 0.6666666666666666,
+  "results": [
+    {
+      "topic": "iPhone 16",
+      "expected": "positive",
+      "actual": "positive",
+      "confidence": 0.5,
+      "match": true,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment about the iPhone 16 is positive, with many sources expressing praise for its features, such as the camera, size, and battery. However, there are divided opinions, as some sources also report issues and criticisms, including drawbacks with the zoom function and other problems. Despite these negative comments, the positive sentiments appear to outweigh the negative ones, indicating a generally favorable view of the iPhone 16."
+    },
+    {
+      "topic": "Twitter rebrand to X",
+      "expected": "negative",
+      "actual": "negative",
+      "confidence": 0.6666666666666666,
+      "match": true,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment towards Twitter's rebrand to X is predominantly negative, with many users expressing dissatisfaction and frustration over lost features and a chaotic transition. While there may be some informative discussions about the rebrand, the majority of opinions lean towards criticism, with some reviews and texts describing the change as poorly received. There appears to be little division in opinion, with most sources conveying a strongly negative view of the rebrand."
+    },
+    {
+      "topic": "ChatGPT",
+      "expected": "mixed",
+      "actual": "positive",
+      "confidence": 0.6666666666666666,
+      "match": false,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment about ChatGPT is positive, with many sources praising its simplicity, availability, features, and language used. However, there are also divided opinions, with some sources criticizing its limitations, highlighting multiple areas where the technology falls short. Despite these criticisms, the positive sentiments outnumber the negative ones, indicating a generally favorable view of ChatGPT."
+    }
+  ]
+}

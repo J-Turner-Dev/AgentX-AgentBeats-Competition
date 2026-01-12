@@ -1,0 +1,13 @@
+﻿# LLM API (FREE - Groq)
+groq==1.0.0
+
+# Web Search (FREE tier)
+tavily-python==0.3.3
+
+# Web framework
+flask==3.0.0
+requests==2.31.0
+
+# Utilities
+python-dotenv==1.0.0
+pydantic==2.12.5

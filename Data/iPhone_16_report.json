@@ -1,0 +1,62 @@
+{
+  "topic": "iPhone 16",
+  "overall_sentiment": "positive",
+  "confidence": 0.5,
+  "sources_analyzed": 6,
+  "breakdown": {
+    "positive": 3,
+    "negative": 2,
+    "neutral": 0,
+    "mixed": 1
+  },
+  "summary": "The overall sentiment about the iPhone 16 is positive, with many sources highlighting its features and praising its capabilities, outweighing minor drawbacks. However, there are divided opinions, as some sources report issues and focus on problems, indicating that not all users have had a uniformly positive experience. Despite these criticisms, the prevailing sentiment remains favorable, suggesting that the iPhone 16's strengths are widely recognized.",
+  "key_findings": [
+    "Positive: best value",
+    "Mixed: best basic iPhone",
+    "Positive: newest Apple Intelligence"
+  ],
+  "sources": [
+    {
+      "url": "https://www.pcmag.com/reviews/apple-iphone-16",
+      "title": "Apple iPhone 16 Review | PCMag",
+      "sentiment": "positive",
+      "confidence": 0.85,
+      "quote": "best value"
+    },
+    {
+      "url": "https://www.cnn.com/cnn-underscored/reviews/apple-iphone-16",
+      "title": "Apple iPhone 16 review: The best basic iPhone ever - CNN",
+      "sentiment": "mixed",
+      "confidence": 0.8,
+      "quote": "best basic iPhone"
+    },
+    {
+      "url": "https://www.tomsguide.com/phones/iphones/just-got-a-new-iphone-16-try-these-10-features-first",
+      "title": "Just got a new iPhone 16? Try these 10 features first | Tom's Guide",
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "quote": "newest Apple Intelligence"
+    },
+    {
+      "url": "https://www.airtel.in/blog/mobile-phones/top-10-hidden-features-of-the-iphone-16-you-might-not-know-about/",
+      "title": "Top 10 Hidden iPhone 16 Features You Should Know | Tips and Tricks",
+      "sentiment": "positive",
+      "confidence": 0.9,
+      "quote": "Top 10 Hidden"
+    },
+    {
+      "url": "https://www.tomsguide.com/phones/iphones/iphone-16-issues-all-the-biggest-problems-so-far",
+      "title": "iPhone 16 issues \u2014 all the biggest problems so far - Tom's Guide",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "quote": "biggest problems"
+    },
+    {
+      "url": "https://www.repairmyphone.today/blog/the-most-common-iphone-16-problems-and-how-to-fix-them",
+      "title": "The most common iPhone 16 problems (and how to fix them)",
+      "sentiment": "negative",
+      "confidence": 0.8,
+      "quote": "common iPhone 16 problems"
+    }
+  ]
+}
