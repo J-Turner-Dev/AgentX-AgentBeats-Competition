@@ -1,6 +1,6 @@
 """
-Quick validation that everything is set up correctly.
-Run this before starting development to catch issues early.
+Validate that everything is set up correctly before starting.
+Run this first to catch any issues!
 """
 
 import os
@@ -20,170 +20,133 @@ def validate_setup():
     # 1. Check Python version
     version = sys.version_info
     if version.major == 3 and version.minor >= 10:
-        print(f"✓ Python version OK: {version.major}.{version.minor}.{version.micro}")
+        print(
+            "✓ Python version OK:", f"{version.major}.{version.minor}.{version.micro}"
+        )
     else:
         issues.append(
             f"✗ Python version too old: {version.major}.{version.minor}, need 3.10+"
         )
 
-    # 2. Check directory structure
-    project_root = Path(__file__).parent.parent
+    # 2. Load environment variables
+    from dotenv import load_dotenv
 
-    required_dirs = ["PurpleAgent", "Tests", "Data"]
-
-    for dir_name in required_dirs:
-        dir_path = project_root / dir_name
-        if dir_path.exists():
-            print(f"✓ Directory exists: {dir_name}/")
-        else:
-            issues.append(f"✗ Missing directory: {dir_name}/")
-
-    # 3. Check required files
-    required_files = ["PurpleAgent/purple_agent.py", "tests/test_topics.py", ".env"]
-
-    for file_path in required_files:
-        full_path = project_root / file_path
-        if full_path.exists():
-            print(f"✓ File exists: {file_path}")
-        else:
-            issues.append(f"✗ Missing file: {file_path}")
-
-    # 4. Check .env file and API keys
-    env_file = project_root / ".env"
-    if env_file.exists():
-        try:
-            from dotenv import load_dotenv
-
-            load_dotenv(env_file)
-
-            groq_key = os.getenv("GROQ_API_KEY")
-            if groq_key and groq_key.startswith("gsk_"):
-                print("✓ Groq API key found (FREE!)")
-            elif groq_key:
-                warnings.append("⚠️ Groq API key found but doesn't start with 'gsk_'")
-            else:
-                issues.append("✗ Groq API key missing in .env")
-
-            tavily_key = os.getenv("TAVILY_API_KEY")
-            if tavily_key and tavily_key.startswith("tvly"):
-                print("✓ Tavily API key found (FREE!)")
-            elif tavily_key:
-                warnings.append("⚠️ Tavily API key found but doesn't start with 'tvly'")
-            else:
-                issues.append("✗ Tavily API key missing in .env")
-
-            model_name = os.getenv("MODEL_NAME", "llama-3.3-70b-versatile")
-            print(f"✓ Model configured: {model_name}")
-        except ImportError:
-            issues.append("✗ python-dotenv not installed (pip install python-dotenv)")
+    env_path = Path("../.env")
+    if env_path.exists():
+        print("✓ .env file found")
+        load_dotenv(dotenv_path=env_path)
     else:
-        issues.append("✗ .env file missing")
+        issues.append("✗ .env file not found in parent directory")
 
-    # 5. Check Python packages
-    required_packages = [
-        ("openai", "openai (for Groq compatibility)"),
-        ("tavily", "tavily-python"),
-        ("flask", "flask"),
-        ("dotenv", "python-dotenv"),
-        ("pydantic", "pydantic"),
+    # 3. Check API keys
+    groq_key = os.getenv("GROQ_API_KEY")
+    if groq_key and groq_key.startswith("gsk_"):
+        print("✓ Groq API key found (starts with gsk_)")
+    elif groq_key:
+        warnings.append(
+            "⚠ Groq API key found but doesn't start with 'gsk_' - might be invalid"
+        )
+    else:
+        issues.append("✗ GROQ_API_KEY missing in .env file")
+
+    tavily_key = os.getenv("TAVILY_API_KEY")
+    if tavily_key and tavily_key.startswith("tvly-"):
+        print("✓ Tavily API key found (starts with tvly-)")
+    elif tavily_key:
+        warnings.append(
+            "⚠ Tavily API key found but doesn't start with 'tvly-' - might be invalid"
+        )
+    else:
+        issues.append("✗ TAVILY_API_KEY missing in .env file")
+
+    # 4. Check required packages
+    packages = {
+        "groq": "Groq API client",
+        "tavily": "Tavily search client",
+        "flask": "Web framework",
+        "dotenv": "Environment variables",
+        "pydantic": "Data validation",
+    }
+
+    for package, description in packages.items():
+        try:
+            __import__(package if package != "dotenv" else "dotenv")
+            print(f"✓ {description} ({package}) installed")
+        except ImportError:
+            issues.append(f"✗ {description} ({package}) not installed")
+
+    # 5. Check directory structure
+    paths_to_check = [
+        ("../PurpleAgent", "purple-agent directory"),
+        ("../PurpleAgent/purple_agent.py", "purple_agent.py file"),
+        ("../GreenAgent", "green-agent directory"),
+        ("../Data", "data directory"),
+        ("../Tests", "tests directory"),
     ]
 
-    print("\nChecking required packages:")
-    for package_name, display_name in required_packages:
-        try:
-            if package_name == "dotenv":
-                import python_dotenv
+    for path, description in paths_to_check:
+        if Path(path).exists():
+            print(f"✓ {description} exists")
+        else:
+            warnings.append(f"⚠ {description} not found at {path}")
 
-                print(f"✓ Package installed: {display_name}")
-            else:
-                __import__(package_name)
-                print(f"✓ Package installed: {display_name}")
-        except ImportError:
-            issues.append(f"✗ Package missing: {display_name}")
-
-    # 6. Test Groq API connectivity (using OpenAI library)
-    print("\nTesting API connectivity...")
+    # 6. Test API connections (optional but helpful)
+    print("\nTesting API connections...")
 
     try:
-        from openai import OpenAI
+        from groq import Groq
 
-        groq_key = os.getenv("GROQ_API_KEY")
         if groq_key:
-            # Connect to Groq via OpenAI-compatible API
-            client = OpenAI(api_key=groq_key, base_url="https://api.groq.com/openai/v1")
-            # Try to list models (lightweight test)
-            models = client.models.list()
-            print(
-                f"✓ Groq API accessible (FREE! - {len(models.data)} models available)"
+            client = Groq(api_key=groq_key)
+            # Try a minimal API call
+            response = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[{"role": "user", "content": "Say 'test'"}],
+                max_tokens=5,
             )
-
-            # Show available models
-            print("  Available models:")
-            for model in models.data:
-                if (
-                    "llama" in model.id.lower()
-                    or "mixtral" in model.id.lower()
-                    or "gemma" in model.id.lower()
-                ):
-                    print(f"    - {model.id}")
-        else:
-            warnings.append("⚠️ Skipping Groq API test (no key)")
+            print("✓ Groq API connection successful")
     except Exception as e:
-        warnings.append(f"⚠️ Groq API test failed: {str(e)[:80]}")
+        issues.append(f"✗ Groq API connection failed: {str(e)[:100]}")
 
     try:
         from tavily import TavilyClient
 
-        tavily_key = os.getenv("TAVILY_API_KEY")
         if tavily_key:
             client = TavilyClient(api_key=tavily_key)
-            # Try a simple search
-            result = client.search(query="test", max_results=1)
-            print("✓ Tavily API accessible (FREE!)")
-        else:
-            warnings.append("⚠️ Skipping Tavily API test (no key)")
+            # Try a minimal search
+            response = client.search(query="test", max_results=1)
+            print("✓ Tavily API connection successful")
     except Exception as e:
-        warnings.append(f"⚠️ Tavily API test failed: {str(e)[:80]}")
+        issues.append(f"✗ Tavily API connection failed: {str(e)[:100]}")
 
     # Summary
     print(f"\n{'=' * 60}")
-
-    if not issues and not warnings:
-        print("✅ SETUP COMPLETE - ALL CHECKS PASSED!")
-        print(f"{'=' * 60}")
-        print("\n🎉 Everything is configured correctly!")
-        print("   Using FREE APIs: Groq + Tavily")
-        print("   Total cost: $0.00")
-        print("\nYou're ready to start building! 🚀")
-        print("\nNext steps:")
-        print("  1. cd PurpleAgent")
-        print("  2. python purple_agent.py")
-        print("  3. cd ../tests")
-        print("  4. python test_agent.py")
-        return True
-    elif not issues:
-        print("✅ SETUP MOSTLY COMPLETE")
-        print(f"{'=' * 60}")
-        print("\n⚠️ Warnings (non-critical):")
-        for warning in warnings:
-            print(f"  {warning}")
-        print("\nYou can proceed, but fix warnings when possible.")
-        return True
-    else:
+    if issues:
         print("❌ SETUP INCOMPLETE")
         print(f"{'=' * 60}")
-        print("\n❌ Critical issues:")
         for issue in issues:
-            print(f"  {issue}")
+            print(issue)
         if warnings:
-            print("\n⚠️ Warnings:")
+            print("\nWarnings:")
             for warning in warnings:
-                print(f"  {warning}")
-        print("\n🔧 Fix these issues before proceeding:")
-        print("  1. Make sure you have .env file with API keys")
-        print("  2. Run: pip install -r requirements.txt")
-        print("  3. Verify directory structure matches project layout")
+                print(warning)
+        print("\n⚠️ Fix these issues before proceeding.")
         return False
+    elif warnings:
+        print("⚠️ SETUP COMPLETE WITH WARNINGS")
+        print(f"{'=' * 60}")
+        for warning in warnings:
+            print(warning)
+        print("\n✓ You can proceed, but check warnings above.")
+        return True
+    else:
+        print("✅ SETUP COMPLETE")
+        print(f"{'=' * 60}")
+        print("All prerequisites met! Ready to run agent.")
+        print("\nNext steps:")
+        print("1. cd ../purple-agent")
+        print("2. python purple_agent.py")
+        return True
 
 
 if __name__ == "__main__":
