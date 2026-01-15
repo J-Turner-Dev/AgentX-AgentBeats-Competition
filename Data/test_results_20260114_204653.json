@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-01-14T20:46:53.064968",
+  "total_tests": 8,
+  "correct": 4,
+  "accuracy": 0.5,
+  "results": [
+    {
+      "topic": "iPhone 16",
+      "expected": "positive",
+      "actual": "mixed",
+      "confidence": 0.5192307692307693,
+      "match": false,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment about the iPhone 16 is generally positive, with many analyses highlighting its strengths and favorable features. However, opinions are divided, as some texts express neutral or negative sentiments, indicating that not all individuals share the same enthusiasm for the device. The presence of both positive and negative opinions suggests a range of perspectives on the iPhone 16. Note: This topic appears to be controversial with divided opinions."
+    },
+    {
+      "topic": "Twitter rebrand to X",
+      "expected": "negative",
+      "actual": "negative",
+      "confidence": 0.7058823529411764,
+      "match": true,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment towards the Twitter rebrand to X is predominantly negative, with multiple analyses indicating unfavorable opinions from users. However, opinions are divided, as one analysis notes a mixed sentiment with both positive and negative reactions from different groups. The majority of the sentiment analyses, though, suggest a clearly unfavorable view of the rebrand."
+    },
+    {
+      "topic": "ChatGPT",
+      "expected": "mixed",
+      "actual": "mixed",
+      "confidence": 0.6923076923076923,
+      "match": true,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment about ChatGPT is predominantly positive, with many analyses highlighting its capabilities, benefits, and successful applications. However, opinions are divided, as some analyses also criticize the tool's limitations and drawbacks, indicating a negative sentiment. The majority of the sentiment analyses suggest a favorable view of ChatGPT, but a minority perspective expresses criticism, reflecting a range of opinions on the topic. Note: This topic appears to be controversial with divided opinions."
+    },
+    {
+      "topic": "climate change",
+      "expected": "negative",
+      "actual": "mixed",
+      "confidence": 0.5051546391752576,
+      "match": false,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment about climate change is predominantly negative, with many analyses expressing critical views of its impacts and consequences. However, opinions are not uniform, as some analyses present a neutral tone, focusing on factual discussions and solutions. The negative sentiment is more pronounced in texts that describe the disruptive effects of climate change, while neutral analyses tend to emphasize adaptation efforts and environmental solutions."
+    },
+    {
+      "topic": "Taylor Swift Eras Tour",
+      "expected": "positive",
+      "actual": "mixed",
+      "confidence": 0.6893203883495147,
+      "match": false,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment about Taylor Swift's Eras Tour is predominantly positive, with many expressing admiration and enthusiasm for the tour's performances. However, opinions are divided, as some individuals have also expressed strongly critical and unfavorable sentiments. The majority of the analyzed texts indicate a favorable tone, but the presence of negative and neutral comments suggests that opinions on the tour are not universally positive."
+    },
+    {
+      "topic": "remote work",
+      "expected": "mixed",
+      "actual": "mixed",
+      "confidence": 0.48979591836734704,
+      "match": true,
+      "sources_analyzed": 6,
+      "summary": "Public sentiment about remote work is mixed, with some individuals expressing satisfaction and others highlighting drawbacks such as isolation and difficulty in building company culture. Opinions on the topic are divided, with strongly entrenched stances on both sides, indicating a polarizing debate. Overall, the sentiment is neither overwhelmingly positive nor negative, but rather a complex blend of both, reflecting the varied experiences and perspectives of individuals on remote work."
+    },
+    {
+      "topic": "electric vehicles",
+      "expected": "mixed",
+      "actual": "mixed",
+      "confidence": 0.5242718446601943,
+      "match": true,
+      "sources_analyzed": 6,
+      "summary": "The overall sentiment towards electric vehicles is largely positive, with many analyses highlighting their benefits and advantages. However, opinions are divided, as some analyses also express negative sentiments and list drawbacks of electric vehicles. This division indicates that public sentiment is not uniform, with both favorable and unfavorable views being expressed."
+    },
+    {
+      "topic": "inflation 2024",
+      "expected": "negative",
+      "actual": "neutral",
+      "confidence": 0.7087378640776698,
+      "match": false,
+      "sources_analyzed": 6,
+      "summary": "Public sentiment about inflation in 2024 is divided, with some views being neutral and factual, while others express either positive or negative emotions. On one hand, some individuals see opportunities in inflation, while on the other hand, others view it as a problem with negative effects. Overall, the sentiment is mixed, reflecting a range of perspectives on the topic."
+    }
+  ]
+}

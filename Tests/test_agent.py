@@ -9,7 +9,7 @@ import os
 sys.path.append("../PurpleAgent")  # Adjust path to your purple-agent directory
 
 from purple_agent import SentimentAgent
-from test_topics import QUICK_TEST_TOPICS
+from test_topics import TEST_TOPICS
 import json
 from datetime import datetime
 
@@ -26,9 +26,9 @@ def test_agent():
     correct = 0
     total = 0
 
-    for i, test_case in enumerate(QUICK_TEST_TOPICS, 1):
+    for i, test_case in enumerate(TEST_TOPICS, 1):
         print(f"\n{'=' * 60}")
-        print(f"TEST {i}/{len(QUICK_TEST_TOPICS)}: {test_case['topic']}")
+        print(f"TEST {i}/{len(TEST_TOPICS)}: {test_case['topic']}")
         print(f"Expected: {test_case['expected_sentiment']}")
         print(f"Reasoning: {test_case['reasoning']}")
         print(f"{'=' * 60}")

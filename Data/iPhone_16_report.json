@@ -1,62 +1,62 @@
 {
   "topic": "iPhone 16",
   "overall_sentiment": "positive",
-  "confidence": 0.5,
+  "confidence": 0.3333333333333333,
   "sources_analyzed": 6,
   "breakdown": {
-    "positive": 3,
+    "positive": 2,
     "negative": 2,
-    "neutral": 0,
+    "neutral": 1,
     "mixed": 1
   },
-  "summary": "The overall sentiment about the iPhone 16 is positive, with many sources highlighting its features and praising its capabilities, outweighing minor drawbacks. However, there are divided opinions, as some sources report issues and focus on problems, indicating that not all users have had a uniformly positive experience. Despite these criticisms, the prevailing sentiment remains favorable, suggesting that the iPhone 16's strengths are widely recognized.",
+  "summary": "Public sentiment about the iPhone 16 is divided, with some analyses indicating a positive tone, praising its features and reliability, while others express criticism and negative sentiments, highlighting issues such as data connection problems. The overall sentiment is mixed, reflecting a range of opinions from strongly favorable to clearly unfavorable. Opinions on the device vary, with some reviewers praising its capabilities and others listing significant problems, resulting in a lack of consensus on the iPhone 16.",
   "key_findings": [
-    "Positive: best value",
-    "Mixed: best basic iPhone",
-    "Positive: newest Apple Intelligence"
+    "Positive: Apple's base model is best",
+    "Mixed: The iPhone 16 Pro Max is, as we've come to expect from Apple, a brilliantly reliable phone, with particularly brilliant audio and video features. ... I have had calls dropped text not going through an",
+    "Positive: The iPhone 16 Pro is outstanding"
   ],
   "sources": [
     {
-      "url": "https://www.pcmag.com/reviews/apple-iphone-16",
-      "title": "Apple iPhone 16 Review | PCMag",
+      "url": "https://markellisreviews.com/reviews/reviews-iphone-16-review/",
+      "title": "iPhone 16 Review: Apple's base model is best",
       "sentiment": "positive",
-      "confidence": 0.85,
-      "quote": "best value"
+      "confidence": 0.8,
+      "quote": "Apple's base model is best"
     },
     {
-      "url": "https://www.cnn.com/cnn-underscored/reviews/apple-iphone-16",
-      "title": "Apple iPhone 16 review: The best basic iPhone ever - CNN",
+      "url": "https://markellisreviews.com/reviews/reviews-iphone-16-pro-max/",
+      "title": "iPhone 16 Pro Max Review: 3 Months Later - Mark Ellis Reviews",
       "sentiment": "mixed",
       "confidence": 0.8,
-      "quote": "best basic iPhone"
+      "quote": "The iPhone 16 Pro Max is, as we've come to expect from Apple, a brilliantly reliable phone, with particularly brilliant audio and video features. ... I have had calls dropped text not going through an"
     },
     {
-      "url": "https://www.tomsguide.com/phones/iphones/just-got-a-new-iphone-16-try-these-10-features-first",
-      "title": "Just got a new iPhone 16? Try these 10 features first | Tom's Guide",
+      "url": "https://www.cnet.com/tech/mobile/the-iphone-16-pro-wowed-me-even-without-apple-intelligence/",
+      "title": "The iPhone 16 Pro Wowed Me Even Without Apple Intelligence",
       "sentiment": "positive",
       "confidence": 0.9,
-      "quote": "newest Apple Intelligence"
+      "quote": "The iPhone 16 Pro is outstanding"
     },
     {
-      "url": "https://www.airtel.in/blog/mobile-phones/top-10-hidden-features-of-the-iphone-16-you-might-not-know-about/",
-      "title": "Top 10 Hidden iPhone 16 Features You Should Know | Tips and Tricks",
-      "sentiment": "positive",
-      "confidence": 0.9,
-      "quote": "Top 10 Hidden"
-    },
-    {
-      "url": "https://www.tomsguide.com/phones/iphones/iphone-16-issues-all-the-biggest-problems-so-far",
-      "title": "iPhone 16 issues \u2014 all the biggest problems so far - Tom's Guide",
-      "sentiment": "negative",
-      "confidence": 0.9,
-      "quote": "biggest problems"
-    },
-    {
-      "url": "https://www.repairmyphone.today/blog/the-most-common-iphone-16-problems-and-how-to-fix-them",
-      "title": "The most common iPhone 16 problems (and how to fix them)",
-      "sentiment": "negative",
+      "url": "https://www.phonearena.com/reviews/iphone-16-pro-vs-iphone-16_id6275",
+      "title": "iPhone 16 Pro vs iPhone 16: All the differences - PhoneArena",
+      "sentiment": "neutral",
       "confidence": 0.8,
-      "quote": "common iPhone 16 problems"
+      "quote": "but for all the rest, the regular model has improved a lot and supports all the same Apple Intelligence features and cool new buttons."
+    },
+    {
+      "url": "https://ozmobiles.com.au/blogs/smartphones/common-iphone-16-issues-problems-you-need-to-know-before-buying?srsltid=AfmBOor1OsgFlpOPgxzRsl_1JKG7ZN13NJR-2O4GSg8OmiBeNK6mOEbN",
+      "title": "Common iPhone 16 Issues and Problems You Need to Know Before ...",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "quote": "Frozen screens \u00b7 Durability \u00b7 Camera problems \u00b7 Apps disappearing \u00b7 Overheating issues"
+    },
+    {
+      "url": "https://discussions.apple.com/thread/255989872",
+      "title": "New iPhone 16 pro max issues - Apple Communities",
+      "sentiment": "negative",
+      "confidence": 0.9,
+      "quote": "Over heating to the point of concern and warning message, black screen when trying to use camera to the point you can't see the image or controls, battery life while told it was to be much better than"
     }
   ]
 }
