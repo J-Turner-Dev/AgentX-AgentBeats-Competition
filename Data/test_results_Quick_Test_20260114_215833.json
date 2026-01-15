@@ -1,0 +1,158 @@
+{
+  "summary": {
+    "suite_name": "Quick Test",
+    "timestamp": "2026-01-14 21:58:33.609445",
+    "total_tests": 5,
+    "successful": 5,
+    "failed": 0,
+    "total_time_seconds": 41.94091534614563,
+    "metrics": {
+      "exact_match_rate": 0.4,
+      "average_accuracy_score": 0.58,
+      "average_confidence": 0.4482238079380937,
+      "average_time_seconds": 8.38773317337036,
+      "average_sources": 6.0
+    }
+  },
+  "detailed_results": [
+    {
+      "topic": "iPhone 16",
+      "category": "technology",
+      "difficulty": "easy",
+      "expected_sentiment": "positive",
+      "actual_sentiment": "mixed",
+      "confidence": 0.3469387755102041,
+      "sources_analyzed": 6,
+      "accuracy_score": 0.3,
+      "exact_match": false,
+      "time_seconds": 7.737637519836426,
+      "success": true,
+      "breakdown": {
+        "positive": 1,
+        "negative": 2,
+        "neutral": 2,
+        "mixed": 1
+      },
+      "summary": "The overall sentiment about the iPhone 16 is mixed, with some analyses expressing favorable opinions about its features, while others mention criticisms or a lack of excitement. Opinions are divided, ranging from positive to negative, indicating that public sentiment is not uniformly aligned. The varied perspectives suggest that individuals have different experiences and expectations from the iPhone 16, resulting in a diverse range of sentiments.",
+      "key_findings": [
+        "Positive: the iPhone 16 is the best value in the company's lineup",
+        "Negative: Two different issues affect the display of the new iPhone 16 lineup.",
+        "Neutral: for all the rest, the regular model has improved a lot and supports all the same Apple Intelligence features and cool new buttons"
+      ],
+      "ground_truth_sentiment": "positive",
+      "ground_truth_confidence": 0.85,
+      "timestamp": "2026-01-14 21:57:59.404489"
+    },
+    {
+      "topic": "Twitter rebrand to X",
+      "category": "social_media",
+      "difficulty": "easy",
+      "expected_sentiment": "negative",
+      "actual_sentiment": "mixed",
+      "confidence": 0.54,
+      "sources_analyzed": 6,
+      "accuracy_score": 0.3,
+      "exact_match": false,
+      "time_seconds": 7.474412202835083,
+      "success": true,
+      "breakdown": {
+        "positive": 0,
+        "negative": 3,
+        "neutral": 2,
+        "mixed": 1
+      },
+      "summary": "The overall sentiment towards Twitter's rebrand to X is mixed, with opinions divided between neutral/analytical views, negative sentiments, and critical opinions. While some analyses focus on providing factual information and lessons from the rebrand, others express clear dissatisfaction and skepticism. The divided opinions indicate that public sentiment on the rebrand is not uniform, with both neutral and negative sentiments being expressed.",
+      "key_findings": [
+        "Negative: It seems like a bad decision that undermines the basic principles of branding",
+        "Neutral: With Thematic, I can surface insights from thousands of Twitter/X user reviews.",
+        "Mixed: For X, the reasons behind the rebranding are lengthy yet still opaque, leading to confusion and skepticism amongst half of its user base."
+      ],
+      "ground_truth_sentiment": "negative",
+      "ground_truth_confidence": 0.95,
+      "timestamp": "2026-01-14 21:58:06.879359"
+    },
+    {
+      "topic": "ChatGPT",
+      "category": "ai",
+      "difficulty": "medium",
+      "expected_sentiment": "mixed",
+      "actual_sentiment": "mixed",
+      "confidence": 0.34,
+      "sources_analyzed": 6,
+      "accuracy_score": 1.0,
+      "exact_match": true,
+      "time_seconds": 10.11735224723816,
+      "success": true,
+      "breakdown": {
+        "positive": 1,
+        "negative": 1,
+        "neutral": 2,
+        "mixed": 2
+      },
+      "summary": "Public sentiment about ChatGPT is divided, with opinions ranging from strongly positive to strongly negative. The overall sentiment is mixed, reflecting both the benefits and drawbacks of the technology. While some individuals express favorable views, highlighting its successes, others criticize its limitations, resulting in a varied and neutral overall assessment.",
+      "key_findings": [
+        "Positive: ChatGPT\u2019s success stories in real-life applications are nothing short of astounding",
+        "Neutral: In November 2023, OpenAI released GPT Builder a tool for users to customize ChatGPT's behavior for a specific use case.",
+        "Negative: potential generation of inaccurate or biased information"
+      ],
+      "ground_truth_sentiment": "mixed",
+      "ground_truth_confidence": 0.8,
+      "timestamp": "2026-01-14 21:58:16.997017"
+    },
+    {
+      "topic": "Taylor Swift Eras Tour",
+      "category": "entertainment",
+      "difficulty": "easy",
+      "expected_sentiment": "positive",
+      "actual_sentiment": "mixed",
+      "confidence": 0.5192307692307693,
+      "sources_analyzed": 6,
+      "accuracy_score": 0.3,
+      "exact_match": false,
+      "time_seconds": 7.5976879596710205,
+      "success": true,
+      "breakdown": {
+        "positive": 3,
+        "negative": 3,
+        "neutral": 0,
+        "mixed": 0
+      },
+      "summary": "The overall sentiment about the Taylor Swift Eras Tour is predominantly positive, with many reviewers expressing enthusiasm and praise for the concert. However, opinions are divided, as some individuals have expressed strongly negative sentiments, criticizing the tour or feeling overwhelmed by its size. The majority of the analyzed texts indicate a favorable view of the tour, but a notable minority holds opposing views. Note: This topic appears to be controversial with divided opinions.",
+      "key_findings": [
+        "Positive: It is technically speaking the best concert show I've ever watched",
+        "Negative: Uninteresting, repetitive and entirely basic, Swift's music is brain-numbingly banal"
+      ],
+      "ground_truth_sentiment": "positive",
+      "ground_truth_confidence": 0.95,
+      "timestamp": "2026-01-14 21:58:24.595133"
+    },
+    {
+      "topic": "remote work",
+      "category": "workplace",
+      "difficulty": "medium",
+      "expected_sentiment": "mixed",
+      "actual_sentiment": "mixed",
+      "confidence": 0.494949494949495,
+      "sources_analyzed": 6,
+      "accuracy_score": 1.0,
+      "exact_match": true,
+      "time_seconds": 9.011575937271118,
+      "success": true,
+      "breakdown": {
+        "positive": 1,
+        "negative": 1,
+        "neutral": 3,
+        "mixed": 1
+      },
+      "summary": "Public sentiment about remote work is divided, with some analyses indicating a negative tone due to concerns such as isolation and difficulty in building company culture, while others express a positive sentiment, highlighting benefits like increased work satisfaction. Neutral assessments also exist, providing instructional guidance or solutions without expressing a clear opinion. Overall, opinions on remote work vary, reflecting a range of perspectives on its advantages and disadvantages.",
+      "key_findings": [
+        "Positive: work satisfaction doubling",
+        "Neutral: None",
+        "Negative: Working remotely makes it harder to build company culture"
+      ],
+      "ground_truth_sentiment": "mixed",
+      "ground_truth_confidence": 0.85,
+      "timestamp": "2026-01-14 21:58:33.607131"
+    }
+  ]
+}
