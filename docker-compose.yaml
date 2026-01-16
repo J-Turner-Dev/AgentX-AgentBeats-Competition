@@ -1,0 +1,50 @@
+version: "3.8"
+
+services:
+  purple-agent:
+    build:
+      context: ./PurpleAgent
+      dockerfile: Dockerfile
+    image: sentiment-purple-agent:latest
+    container_name: sentiment-purple
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - TAVILY_API_KEY=${TAVILY_API_KEY}
+      - PORT=8000
+      - HOST=0.0.0.0
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import requests; requests.get('http://localhost:8000/health')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - agent-network
+
+  green-agent:
+    build:
+      context: ./GreenAgent
+      dockerfile: Dockerfile
+    image: sentiment-green-agent:latest
+    container_name: sentiment-green
+    depends_on:
+      purple-agent:
+        condition: service_healthy
+    environment:
+      - PURPLE_AGENT_URL=http://purple-agent:8000
+    volumes:
+      - ./data:/app/output
+    networks:
+      - agent-network
+
+networks:
+  agent-network:
+    driver: bridge

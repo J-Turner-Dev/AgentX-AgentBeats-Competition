@@ -1,0 +1,241 @@
+{
+  "participants": {
+    "agent": "unknown-agent"
+  },
+  "results": [
+    {
+      "pass_rate": 0.3,
+      "time_used": 14.248768377304078,
+      "max_score": 1.0,
+      "details": {
+        "summary": {
+          "total_tests": 10,
+          "successful_tests": 10,
+          "failed_tests": 0,
+          "correct": 3,
+          "accuracy": 0.3,
+          "average_score": 0.52,
+          "average_time": 14.248768377304078,
+          "average_confidence": 0.5567917579827057,
+          "total_time": 142.49098205566406,
+          "pass_rate": 0.3
+        },
+        "by_category": {
+          "technology": {
+            "accuracy": 0.0,
+            "average_score": 0.3,
+            "average_time": 6.088346481323242,
+            "total_tests": 1
+          },
+          "social_media": {
+            "accuracy": 0.0,
+            "average_score": 0.3,
+            "average_time": 5.120710372924805,
+            "total_tests": 1
+          },
+          "ai": {
+            "accuracy": 0.5,
+            "average_score": 0.65,
+            "average_time": 10.567920207977295,
+            "total_tests": 2
+          },
+          "entertainment": {
+            "accuracy": 0.0,
+            "average_score": 0.3,
+            "average_time": 6.301901817321777,
+            "total_tests": 1
+          },
+          "workplace": {
+            "accuracy": 0.5,
+            "average_score": 0.65,
+            "average_time": 20.475335001945496,
+            "total_tests": 2
+          },
+          "environment": {
+            "accuracy": 0.0,
+            "average_score": 0.3,
+            "average_time": 20.49693536758423,
+            "total_tests": 1
+          },
+          "finance": {
+            "accuracy": 1.0,
+            "average_score": 1.0,
+            "average_time": 19.3756685256958,
+            "total_tests": 1
+          },
+          "food": {
+            "accuracy": 0.0,
+            "average_score": 0.4,
+            "average_time": 23.017610788345337,
+            "total_tests": 1
+          }
+        },
+        "by_difficulty": {
+          "easy": {
+            "accuracy": 0.0,
+            "average_score": 0.3,
+            "total_tests": 6
+          },
+          "medium": {
+            "accuracy": 1.0,
+            "average_score": 1.0,
+            "total_tests": 3
+          },
+          "hard": {
+            "accuracy": 0.0,
+            "average_score": 0.4,
+            "total_tests": 1
+          }
+        },
+        "results": [
+          {
+            "topic": "iPhone 16",
+            "expected": "positive",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.3,
+            "confidence": 0.49523809523809514,
+            "time": 6.088346481323242,
+            "category": "technology",
+            "difficulty": "easy",
+            "sources": 6,
+            "ground_truth_confidence": 0.85,
+            "error": null
+          },
+          {
+            "topic": "Twitter rebrand to X",
+            "expected": "negative",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.3,
+            "confidence": 0.68,
+            "time": 5.120710372924805,
+            "category": "social_media",
+            "difficulty": "easy",
+            "sources": 6,
+            "ground_truth_confidence": 0.83,
+            "error": null
+          },
+          {
+            "topic": "ChatGPT",
+            "expected": "mixed",
+            "actual": "mixed",
+            "correct": true,
+            "score": 1.0,
+            "confidence": 0.3663366336633664,
+            "time": 3.731574773788452,
+            "category": "ai",
+            "difficulty": "medium",
+            "sources": 6,
+            "ground_truth_confidence": 0.84,
+            "error": null
+          },
+          {
+            "topic": "Taylor Swift Eras Tour",
+            "expected": "positive",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.3,
+            "confidence": 0.6923076923076923,
+            "time": 6.301901817321777,
+            "category": "entertainment",
+            "difficulty": "easy",
+            "sources": 6,
+            "ground_truth_confidence": 0.95,
+            "error": null
+          },
+          {
+            "topic": "remote work",
+            "expected": "mixed",
+            "actual": "mixed",
+            "correct": true,
+            "score": 1.0,
+            "confidence": 0.36,
+            "time": 19.25689959526062,
+            "category": "workplace",
+            "difficulty": "medium",
+            "sources": 6,
+            "ground_truth_confidence": 0.85,
+            "error": null
+          },
+          {
+            "topic": "AI replacing jobs",
+            "expected": "negative",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.3,
+            "confidence": 0.42857142857142855,
+            "time": 17.404265642166138,
+            "category": "ai",
+            "difficulty": "easy",
+            "sources": 5,
+            "ground_truth_confidence": 0.85,
+            "error": null
+          },
+          {
+            "topic": "climate change",
+            "expected": "negative",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.3,
+            "confidence": 0.4999999999999999,
+            "time": 20.49693536758423,
+            "category": "environment",
+            "difficulty": "easy",
+            "sources": 6,
+            "ground_truth_confidence": 0.9,
+            "error": null
+          },
+          {
+            "topic": "return to office mandates",
+            "expected": "negative",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.3,
+            "confidence": 0.5306122448979592,
+            "time": 21.69377040863037,
+            "category": "workplace",
+            "difficulty": "easy",
+            "sources": 6,
+            "ground_truth_confidence": 0.9,
+            "error": null
+          },
+          {
+            "topic": "cryptocurrency regulation",
+            "expected": "mixed",
+            "actual": "mixed",
+            "correct": true,
+            "score": 1.0,
+            "confidence": 0.5148514851485149,
+            "time": 19.3756685256958,
+            "category": "finance",
+            "difficulty": "medium",
+            "sources": 6,
+            "ground_truth_confidence": 0.8,
+            "error": null
+          },
+          {
+            "topic": "pineapple on pizza",
+            "expected": "mixed",
+            "actual": "positive",
+            "correct": false,
+            "score": 0.4,
+            "confidence": 1.0,
+            "time": 23.017610788345337,
+            "category": "food",
+            "difficulty": "hard",
+            "sources": 1,
+            "ground_truth_confidence": 0.83,
+            "error": null
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "timestamp": "2026-01-16T04:27:27.911039",
+    "total_tasks": 10,
+    "evaluator": "sentiment-analysis-green-agent",
+    "version": "1.0.0"
+  }
+}

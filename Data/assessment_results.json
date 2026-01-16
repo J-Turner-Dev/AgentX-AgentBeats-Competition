@@ -1,0 +1,95 @@
+{
+  "participants": {
+    "purple_agent": "test-agent-id"
+  },
+  "results": [
+    {
+      "pass_rate": 0.4,
+      "time_used": 7.63420295715332,
+      "max_score": 1.0,
+      "details": {
+        "summary": {
+          "total_tests": 5,
+          "correct": 2,
+          "accuracy": 0.4,
+          "average_score": 0.64,
+          "average_time": 7.63420295715332,
+          "average_confidence": 0.513833196175542
+        },
+        "by_category": {
+          "technology": {
+            "accuracy": 0.0,
+            "average_score": 0.4
+          },
+          "social_media": {
+            "accuracy": 0.0,
+            "average_score": 0.4
+          },
+          "ai": {
+            "accuracy": 1.0,
+            "average_score": 1.0
+          },
+          "entertainment": {
+            "accuracy": 0.0,
+            "average_score": 0.4
+          },
+          "workplace": {
+            "accuracy": 1.0,
+            "average_score": 1.0
+          }
+        },
+        "results": [
+          {
+            "topic": "iPhone 16",
+            "expected": "positive",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.4,
+            "confidence": 0.34615384615384615,
+            "time": 7.135732173919678
+          },
+          {
+            "topic": "Twitter rebrand to X",
+            "expected": "negative",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.4,
+            "confidence": 0.5192307692307693,
+            "time": 9.429579019546509
+          },
+          {
+            "topic": "ChatGPT",
+            "expected": "mixed",
+            "actual": "mixed",
+            "correct": true,
+            "score": 1.0,
+            "confidence": 0.54,
+            "time": 5.017370700836182
+          },
+          {
+            "topic": "Taylor Swift Eras Tour",
+            "expected": "positive",
+            "actual": "mixed",
+            "correct": false,
+            "score": 0.4,
+            "confidence": 0.6792452830188679,
+            "time": 9.112980604171753
+          },
+          {
+            "topic": "remote work",
+            "expected": "mixed",
+            "actual": "mixed",
+            "correct": true,
+            "score": 1.0,
+            "confidence": 0.4845360824742267,
+            "time": 7.4753522872924805
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "timestamp": "2026-01-15 20:05:46",
+    "total_tasks": 5
+  }
+}

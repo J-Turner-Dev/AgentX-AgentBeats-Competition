@@ -1,0 +1,80 @@
+name: Build and Publish Docker Images
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_PREFIX: ${{ github.repository }}
+
+jobs:
+  build-purple:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata for Purple Agent
+        id: meta-purple
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-purple
+          tags: |
+            type=raw,value=latest
+            type=sha
+
+      - name: Build and push Purple Agent
+        uses: docker/build-push-action@v5
+        with:
+          context: ./purple-agent
+          push: true
+          tags: ${{ steps.meta-purple.outputs.tags }}
+          labels: ${{ steps.meta-purple.outputs.labels }}
+
+  build-green:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata for Green Agent
+        id: meta-green
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-green
+          tags: |
+            type=raw,value=latest
+            type=sha
+
+      - name: Build and push Green Agent
+        uses: docker/build-push-action@v5
+        with:
+          context: ./green-agent
+          push: true
+          tags: ${{ steps.meta-green.outputs.tags }}
+          labels: ${{ steps.meta-green.outputs.labels }}
