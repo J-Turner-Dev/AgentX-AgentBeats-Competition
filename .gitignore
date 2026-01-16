@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 .env
+.env.docker
 *.log
 data/cache/
 .DS_Store

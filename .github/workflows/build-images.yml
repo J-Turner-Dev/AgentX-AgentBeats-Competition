@@ -40,7 +40,7 @@ jobs:
       - name: Build and push Purple Agent
         uses: docker/build-push-action@v5
         with:
-          context: ./purple-agent
+          context: ./PurpleAgent
           push: true
           tags: ${{ steps.meta-purple.outputs.tags }}
           labels: ${{ steps.meta-purple.outputs.labels }}
@@ -74,7 +74,7 @@ jobs:
       - name: Build and push Green Agent
         uses: docker/build-push-action@v5
         with:
-          context: ./green-agent
+          context: ./GreenAgent
           push: true
           tags: ${{ steps.meta-green.outputs.tags }}
           labels: ${{ steps.meta-green.outputs.labels }}
